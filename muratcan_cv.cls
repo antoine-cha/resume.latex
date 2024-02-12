@@ -135,12 +135,22 @@ Position: & \@claimedposition \\
 {\itshape  \footnotesize \mdseries  \color{black!60!\@themecolor} #1 }
 }
 
-\newcommand{\datedexperience}[2]{%
-  \begin{small} \mbox { \hspace{1em} \scshape \textbf{#1} } \end{small} \hfill \datetext{#2}\\[0.01cm] %
+% {Job title}{Company}{dates}
+\newcommand{\datedexperience}[3]{%
+  \begin{small}
+    \mbox { \hspace{1em} \textbf{#1} }
+    \hspace{0.3em} \textcolor{darkgray}{\textit{\textbf{#2}}}
+  \end{small}
+  \hfill \datetext{#3}\\[0.01cm] %
 }
 
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
 \newcommand{\explanation}[1]{%
-    \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.05cm]
+  \begin{changemargin}{20pt}{30pt}
+    \hspace{0.2em} \footnotesize #1 %\\[0.05cm]
+  \end{changemargin}
 }
 
 \newcommand{\explanationdetail}[1]{%
