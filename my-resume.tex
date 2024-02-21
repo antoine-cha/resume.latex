@@ -1,5 +1,7 @@
 \documentclass{muratcan_cv}
 
+\usepackage{hyperref}
+
 \setname{Antoine}{Chassang}
 \setaddress{London, UK}
 \setmobile{+44 9751 771 375}
@@ -20,60 +22,83 @@
 %         Summary         %
 % ======================= %
 \addblocktext{Summary}{%
-Deep learning engineer with experience in start-ups as both an individual contributor and a founder,
-Antoine also worked in research environments. Now looking for a research engineer
-with a focus on developing user-powering tools
+    Deep learning engineer with experience in start-ups as both an individual contributor and a founder,
+    Antoine also worked in research environments. Now looking for a research engineer
+    with a focus on developing user-powering tools
 }
 
 % ======================= %
 %         Experience         %
 % ======================= %
 \section{Experience}
-    \datedexperience{ML Engineer}{Snap Inc.}{June 2022 - June 2023 / London, UK}
+    \datedexperience{Co-founder \& CTO}{Comand AI}{April 2023 - Jan 2024 / London, UK}
     \explanationdetail{
         Develop deep learning models to transform faces on mobile devices \\
-        Released lenses: Smile (Oct 2021, sole contributor), Kiss (Jun 2022) \\
-        Design flexible data pipelines (inc. runtime imports), reimplement training
-        pipelines from TF to PyTorch. Mentor Juniors \\
-        \textbf{Focus areas:} Generative modelling (GANs), Controllable synthetic data
-        generation (StyleGAN, CLIP-based approaches), img2img models \\
+    }
+    \datedexperience{ML Engineer}{Snap Inc.}{June 2021 - June 2023 / London, UK}
+    \explanationdetail{
+        Developed DNNs to transform faces on mobile devices \\
+        Main contributor of very popular Lenses:
+        \href{https://lens.snapchat.com/1194bb7952e94c769041c9be86b32993}{My Twin},
+        \href{https://www.snapchat.com/lens/c98355cd57274490888c1d6765bc5460}{Smile} \\
+        Designed flexible data pipelines (inc. runtime imports), \\
+        Migrated training pipelines from TF to PyTorch. Mentored Juniors \\
+        \textbf{Focus areas:} Controllable generative modelling (GANs, StyleGAN, CLIP-based approaches),
+        img2img models \\
         \textbf{Technologies:} PyTorch, Tensorflow, Numpy
     }
     \\[0.05cm] % Small visual space for splits
     \datedexperience{Computer Vision Research Lead}{Realeyes}{Jan 2019 - May 2021 / London, UK}
     \explanationdetail{
-        Develop deep learning based emotions classifiers (very imbalanced data 1:1000) \\
+        Developed deep learning based emotions classifiers (very imbalanced data 1:1000) \\
         Improved speed (3x) and accuracy of classifiers, standardised performance assessment \\
         Scaled training pipelines to 10x data \\
         Led tech validation with Google, resulting in a multi-million \$ partnership \\
-        \textbf{Focus areas:} CNNs for mobile devices, imbalanced datasets (1:1000), data quality \\
+        \textbf{Focus areas:} DNNs for mobile devices, imbalanced datasets (1:1000), data quality \\
         \textbf{Technologies:} Python, Tensorflow, Numpy, Pandas
     }
     \\[0.05cm] % Small visual space for splits
     %
-    \datedexperience{Research Lead (employee \#2)}{Reminiz (acq. by IAS in 2021)}{Jan 2016 - Dec 2018}
+    \datedexperience{Research Lead (employee \#2)}{Reminiz (acq by IAS in 2021)}{Jan 2016 - Dec 2018 / Paris, FR}
     \explanationdetail{
-        Face recognition for live TV \\
-        Develop face recognition pipeline from scratch: from web scraping to TV feeds processing \\
-        Retrieval from 10,000 classes in < 100ms using HNSW,
-        able to integrate new celebrities in < 1 hour (scraping included) \\
+        Develop face recognition of celebrities from web scraping to TV feeds processing \\
+        Retrieval from 10k classes in < 100ms using HNSW \\
+        % Automated, scraping,
+        %able to integrate new celebrities in < 1 hour (scraping included) \\
         \textbf{Focus areas:} CNNs, image retrieval, detection models \\
         \textbf{Technologies:} Tensorflow, MxNet, Numpy
-     }
+    }
+    % \\[0.05cm] % Small visual space for splits
+
+    \datedexperience{Research Engineer}{Moodstocks (acq. by Google in 2016)}{Sep 2015 - Dec 2015 / Paris, FR}
+    % \datedexperience{Research Lead (employee \#2)}{Reminiz (acq by IAS in 2021)}{Jan 2016 - Dec 2018 / Paris, FR}
+    \explanationdetail{
+        Develop CNN models for an image search engine that ran on mobile devices \\
+        \textbf{Focus areas:} CNNs for mobile devices, knowledge distillation, image retrieval \\
+        \textbf{Technologies:} Torch7 (Lua)
+    }
+    \\[0.05cm] % Small visual space for splits
     %
+    \datedexperience{Research Trainee}{Université de Montréal}{Jun 2014 - Dec 2014 / Montréal, CA}
+    \explanationdetail{
+        In the lab of Pr. Yoshua Bengio \\
+        Co-authored \href{https://arxiv.org/abs/1412.6550}{FitNets: Hints for Thin Deep Nets} \\
+        Worked on fast face detection, using cascade of neural networks \\
+        \textbf{Technologies:} Theano, PyLearn2, Numpy
+    }
 %Education
 \section{Education}
-    \datedexperience{Boğaziçi University}{2013-2018}
-    \explanation{B.S in Computer Engineering}
-     \explanationdetail{\coloredbullet\ %
-     \lipsum[1][3-4]\par %replace this part with actual text
-     }
-    \datedexperience{Technical University of Munich}{2019-2022}
-    \explanation{M.S in Informatics}
-    \explanationdetail{\coloredbullet\ %
-     \lipsum[1][3-4]\par %replace this part with actual text
-     }
-%
+    \datedexperience{M.Sc. Electrical and Computer Engineering}{Georgia Institute of Technology}{2013-2015}
+    \explanationdetail{
+        GPA : 3.88 - Key topics: Machine Learning, Data Visualization \\
+        Co-authored \href{https://poloclub.github.io/polochau/papers/15-iui-aurigo.pdf}{Aurigo: An Interactive Tour Planner for Personalized Itineraries}
+    }
+
+    \datedexperience{M.Sc. Electrical and Computer Engineering}{CentraleSupélec}{2013-2015}
+    % \explanationdetail{
+    %     GPA : 3.88 - Key topics: Machine Learning, Data Visualization \\
+    %     Co-authored \href{https://poloclub.github.io/polochau/papers/15-iui-aurigo.pdf}{Aurigo: An Interactive Tour Planner for Personalized Itineraries}
+    % }
 %
 % Skills
 \section{Skills}

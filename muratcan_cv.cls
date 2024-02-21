@@ -118,7 +118,7 @@ Position: & \@claimedposition \\
 % Edit section styles
 
 \titleformat{\section}      % Customise the \section command
-  {\large\bfseries\scshape\raggedright\color{\@themecolor}} % Make the \section headers large (\Large),
+  {\large\bfseries\scshape\raggedright\color{black!40!\@themecolor}} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {\ruleafter}                           % Can be used to insert code before the heading
@@ -139,7 +139,7 @@ Position: & \@claimedposition \\
 \newcommand{\datedexperience}[3]{%
   \begin{small}
     \mbox { \hspace{1em} \textbf{#1} }
-    \hspace{0.3em} \textcolor{darkgray}{\textit{\textbf{#2}}}
+    \hspace{0.3em} \textcolor{black!40!\@themecolor}{\textbf{#2}}
   \end{small}
   \hfill \datetext{#3}\\[0.01cm] %
 }
@@ -201,7 +201,7 @@ Position: & \@claimedposition \\
 
 \newcommand\createfootnote{%
   \renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
-    \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
-    \let\thefootnote\relax\footnote{\today\ / \href{https://github.com/muratcankaracabey/latex_cv}{source code}}}
+  \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
+}
 
 
