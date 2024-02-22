@@ -42,12 +42,11 @@
 
 \hypersetup{
     colorlinks=true,
-    urlcolor=cyan,
+    urlcolor=teal,
 }
 
 % View commands
 % Header
-
 \newcommand\headerview[2]{ % image_path: path to the profile picture
   \begin{minipage}{0.25\linewidth}
   \profpic{#1}{#2}
@@ -71,8 +70,6 @@
     {};}
 
 %contactsubviews
-
-
 \newcommand{\githubview}{\href{\@linkedinaccount}{\faLinkedinSquare\ \footnotesize linkedin}}
 \newcommand{\linkedinview}{\href{\@githubaccount}{\faGithubSquare\ \footnotesize github}}
 
