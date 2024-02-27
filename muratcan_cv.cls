@@ -1,25 +1,29 @@
+% Template heavily inspired by
 % Created by Murat Can Karacabey
 % this is inspired by Michael Pollind's Awesome CV
 % Created from scratch as a much simpler alternative to it to actually learn LaTeX.
 % Might be interpreted as an easier-to-edit or easier-to-understand-what-is-going-on version of it.
-\author{Murat Can Karacabey}
+\author{Antoine Chassang}
 \RequirePackage[dvipsnames]{xcolor} % moved here I guess article class causes option clash with xcolor if used after loading the class
 \LoadClass[11pt]{article}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{muratcan_cv}[2020/04/15 Muratcan CV Class]
-\RequirePackage[sfdefault]{noto}
-\RequirePackage{etoolbox}
-\RequirePackage{pgffor}
-\RequirePackage{titlesec}
-\RequirePackage{tikz}
-\RequirePackage{fontspec}
+
+% Dependencies
 \RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\RequirePackage[sfdefault]{noto}
+\RequirePackage{array}
+\RequirePackage[inline]{enumitem}
+\RequirePackage{etoolbox}
 \RequirePackage{hyperref}
-\RequirePackage{fontawesome}
-\RequirePackage{mfirstuc}
 \RequirePackage{ifthen}
 \RequirePackage{lipsum}
-\RequirePackage{array}
+\RequirePackage{mfirstuc}
+\RequirePackage{pgffor}
+\RequirePackage{tikz}
+\RequirePackage{titlesec}
+\RequirePackage{fontawesome}
+
 \pagestyle{empty}
 
 %Setup
@@ -34,15 +38,13 @@
 \newcommand*{\setgithubaccount}[1]{\def\@githubaccount{#1}}
 
 %Setup for coverletter
-
 \newcommand*{\setcompanyname}[1]{\def\@companyname{#1}}
 \newcommand*{\setcontactperson}[1]{\def\@contactperson{#1}}
 \newcommand*{\setclaimedposition}[1]{\def\@claimedposition{#1}}
 
-
 \hypersetup{
     colorlinks=true,
-    urlcolor=teal,
+    urlcolor=cyan,
 }
 
 % View commands
@@ -188,12 +190,14 @@ Position: & \@claimedposition \\
 }
 
 \newcommand\createbullets[1]{%
-    \renewcommand{\labelitemi}{\coloredbullet}
-  \begin{itemize}
+  % \renewcommand{\labelitemi}{\coloredbullet}
+  \begin{enumerate*}
+  % \begin{itemize}
     \makeatletter
-    \@for\thisitem:=#1\do{\itemwithtext{\thisitem}}
+    \@for\thisitem:=#1\do{\item \thisitem}
     \makeatother
-  \end{itemize}
+  \end{enumerate*}
+  % \end{itemize}
 }
 
 \newcommand\createfootnote{%
