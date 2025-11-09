@@ -3,13 +3,13 @@
 \usepackage{hyperref}
 
 \setname{Antoine}{Chassang}
-\setaddress{London, UK}
-\setmobile{+44 9751 771 375}
+\setaddress{Paris, FR}
+\setmobile{+33 6 76 76 74 71}
 \setmail{antoine.chassang0@gmail.com}
 \setposition{Research Engineer} %ignored for now
 \setlinkedinaccount{https://www.linkedin.com/in/antoine-chassang-3a159a65}
 \setgithubaccount{https://github.com/antoine-cha}
-\setthemecolor{blue}
+\setthemecolor{mcv-accent}
 
 \begin{document}
 %Set variables
@@ -23,17 +23,22 @@
 % ======================= %
 \vspace{0.5ex}
 \explanationdetail{\hspace{2ex}
-    Seasoned Deep Learning Engineer with a proven track record
-    in startups --- as a founder and a key contributor --- and in research environments.
-    Passionate about AI,
-    Antoine is looking for a Research Engineer role where he can focus on developing state-of-the-art AI to solve meaningful problems.
-
+Research engineer with 10+ years of experience translating deep learning research into scalable experiments.
+Former co-founder / CTO of an AI startup, bridging frontier research and deployable systems.
+Currently focused on scalable experimentation environments, and enabling faster research iteration.\\
+Looking to join a frontier AI research team where I can contribute directly to building the next generation of intelligent systems.
 }
 
 % ======================= %
 %         Experience      %
 % ======================= %
 \section{Experience}
+    \datedexperience{Core Team Researcher, Founding team}{H Company}{June 2024 - Now / London, UK / Paris, FR}
+    \explanationdetail{
+        Built the VLM eval stack from scratch, reproducing key baselines \& integrating with training \\
+        Designed \& implemented the agent tracing system powering large-scale RL data generation (offline \& online)\\
+        Led research-driven design \& implementation of the agent framework, enabling rapid iteration, ablations \& exploration of new agent architectures\\
+    }
     \datedexperience{Co-founder \& CTO}{Comand AI}{June 2023 - Jan 2024 / London, UK}
     \explanationdetail{
         AI assistant based on LLMs for planning and analysis of military operations (human-in-the-loop) \\
@@ -63,9 +68,9 @@
         \textbf{Technologies:} Tensorflow, Numpy, Pandas
     }
     \\[0.05cm] % Small visual space for splits
-    \datedexperience{Research Lead (employee \#2)}{Reminiz (acq. by IAS in 2021)}{Jan 2016 - Dec 2018 / Paris, FR}
+    \datedexperience{Research Lead (employee \#2)}{Context (acq. by IAS in 2021)}{Jan 2016 - Dec 2018 / Paris, FR}
     \explanationdetail{
-        Develop face recognition of celebrities from web scraping to TV feeds processing \\
+        Developed face recognition of celebrities from web scraping to TV feeds processing \\
         Retrieval from 10k classes in $< 100$ms using HNSW \\
         \textbf{Focus areas:} CNNs, image retrieval, detection models \\
         \textbf{Technologies:} Tensorflow, MxNet, Numpy
@@ -87,12 +92,16 @@
 \section{Publications}
     \datedexperience{}{}{}  % Placeholder
     \explanationdetail{
-        \textbf{\href{https://arxiv.org/abs/1412.6550}{FitNets: Hints for Thin Deep Nets}
-        \textcolor{darkgray}{ICLR 2015}} 2,000+ citations \\
+        \textcolor{mcv-link}{\textbf{\href{https://arxiv.org/abs/2510.19949}{Surfer 2: The Next Generation of Cross-Platform Computer Use Agents}}}
+        \textcolor{darkgray}{Oct 2025} \textcolor{darkgray}{H Company research team} \\
+        \textcolor{mcv-link}{\textbf{\href{https://arxiv.org/abs/2506.02865}{Surfer-H Meets Holo1: Cost-Efficient Web Agent Powered by Open Weights}}}
+        \textcolor{darkgray}{June 2025} \textcolor{darkgray}{H Company research team} \\
+        \textcolor{mcv-link}{\textbf{\href{https://arxiv.org/abs/1412.6550}{FitNets: Hints for Thin Deep Nets}}}
+        \textcolor{darkgray}{ICLR 2015} \\
         Adriana Romero, Nicolas Ballas, Samira Ebrahimi Kahou, \textbf{Antoine Chassang}, Carlo Gatta, Yoshua Bengio\\
-        \textbf{\href{https://poloclub.github.io/polochau/papers/15-iui-aurigo.pdf}{Aurigo: An Interactive Tour Planner for Personalized Itineraries}
-        \textcolor{darkgray}{IUI 2015}}\\
-        Alexandre Yahi, \textbf{Antoine Chassang}, Louis Raynaud, Hugo Duthil, Duen Horng (Polo) Chau
+        \textcolor{mcv-link}{\textbf{\href{https://poloclub.github.io/polochau/papers/15-iui-aurigo.pdf}{Aurigo: An Interactive Tour Planner for Personalized Itineraries}}}
+        \textcolor{darkgray}{IUI 2015}\\
+        Alexandre Yahi, \textbf{Antoine Chassang}, Louis Raynaud, Hugo Duthil, Duen Horng (Polo) Chau\\
     }
 
 %Education
@@ -105,22 +114,24 @@
     \explanationdetail{
         Key topics: Machine Learning, Information theory, Signal processing, Controls
     }
-    \datedexperience{Intensive preparation courses in Maths \& Physics}{Lycée Blaise Pascal}{2011-2013 / Clermont-Ferrand, FR}
+    \datedexperience{Intensive preparation courses in Maths \& Physics}{Lycée Blaise Pascal}{2011-2013 / Clermont-Fd, FR}
     \explanationdetail{
-         2 years mathematics, physics course to prepare nationial selection tests
+        2 years mathematics, physics course to prepare national selection tests
     }
 %
 % Skills
 \section{Skills}
     %
-    \newcommand{\programming}{\createskill{Programming Languages}{Python, SQL, Javascript (moderate)}}
-    \newcommand{\libraries}{\createskill{Libraries}{PyTorch, Numpy, Tensorflow, Pandas}}
+    \newcommand{\research}{\createskill{Research Focus}{Multimodal evaluation, VLMs, agent architectures, RL}}
+    \newcommand{\programming}{\createskill{Programming Languages}{Python (expert), Bash, SQL}}
+    \newcommand{\ml}{\createskill{ML \& Research Frameworks}{PyTorch, TensorFlow, NumPy, Pandas, Hydra, Torch7 (Lua)}}
+    \newcommand{\systems}{\createskill{Systems}{Linux, Docker, Slurm, AWS, Git, CI/CD}}
     \newcommand{\languages}{\createskill{Languages}{French (native), English (fluent), Italian (moderate)}}
-    \createskills{\programming, \libraries, \languages}
+    \createskills{\research, \programming, \ml, \systems, \languages}
 % Experience
 \section{Hobbies}
-    \newcommand{\sports}{\createskill{Sport}{Running, Ski, Football, Hiking}}
-    \newcommand{\reading}{\createskill{Reading}{Sci-Fi, Essays, Science}}
+    \newcommand{\sports}{\createskill{Sport}{Running, Skiing, Football, Hiking}}
+    \newcommand{\reading}{\createskill{Reading}{Sci-Fi, Essays}}
     \newcommand{\other}{\createskill{Other}{Board games, Jigsaw puzzles}}
     \createskills{\sports, \reading, \other}
 

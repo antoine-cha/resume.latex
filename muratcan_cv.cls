@@ -9,6 +9,16 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{muratcan_cv}[2020/04/15 Muratcan CV Class]
 
+\definecolor{mcv-ink}{HTML}{0F1C2E}
+\definecolor{mcv-slate}{HTML}{1C3B55}
+\definecolor{mcv-accent}{HTML}{E07A3A}
+\definecolor{mcv-muted}{HTML}{7A8CA2}
+\definecolor{mcv-link}{HTML}{1F5D8C}
+\definecolor{mcv-company}{HTML}{A72C24}
+\definecolor{mcv-card}{HTML}{F8F4EF}
+
+\def\@themecolor{mcv-accent}
+
 % Dependencies
 \RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \RequirePackage[sfdefault]{noto}
@@ -42,9 +52,12 @@
 \newcommand*{\setcontactperson}[1]{\def\@contactperson{#1}}
 \newcommand*{\setclaimedposition}[1]{\def\@claimedposition{#1}}
 
+\definecolor{linkorange}{HTML}{FF8C00}
 \hypersetup{
     colorlinks=true,
-    urlcolor=cyan,
+    urlcolor=mcv-link,
+    linkcolor=mcv-link,
+    citecolor=mcv-link,
 }
 
 % View commands
@@ -105,7 +118,7 @@ Position: & \@claimedposition \\
 
 % Helper commands
 
-\newcommand\ruleafter[1]{#1~{\color{black!60!\@themecolor}\hrulefill}} % a trick to put the line with <before> parameter in \titleformat
+\newcommand\ruleafter[1]{#1~{\color{mcv-muted}\hrulefill}} % a trick to put the line with <before> parameter in \titleformat
 
 %colorfulpipeseperator
 
@@ -117,7 +130,7 @@ Position: & \@claimedposition \\
 % Edit section styles
 
 \titleformat{\section}      % Customise the \section command
-  {\large\bfseries\scshape\raggedright\color{black!40!\@themecolor}} % Make the \section headers large (\Large),
+  {\large\bfseries\scshape\raggedright\color{mcv-slate}} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {\ruleafter}                           % Can be used to insert code before the heading
@@ -131,14 +144,14 @@ Position: & \@claimedposition \\
 }
 
 \newcommand{\datetext}[1]{%
-{\itshape  \footnotesize \mdseries  \color{black!60!\@themecolor} #1 }
+{\itshape  \footnotesize \mdseries  \color{mcv-ink} #1 }
 }
 
 % {Job title}{Company}{dates}
 \newcommand{\datedexperience}[3]{%
   \begin{small}
     \mbox { \hspace{1em} \textbf{#1} }
-    \hspace{0.3em} \textcolor{black!40!\@themecolor}{\textbf{#2}}
+    \hspace{0.3em} \textcolor{mcv-company}{\textbf{#2}}
   \end{small}
   \hfill \datetext{#3}\\[0.01cm] %
 }
@@ -204,5 +217,3 @@ Position: & \@claimedposition \\
   \renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
   \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
 }
-
-
